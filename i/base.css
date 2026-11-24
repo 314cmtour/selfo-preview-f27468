@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+/*------------------------------------------------
+  Default Reset & Base Style Sheet
+ -----------------------------------------------*/
+
+
+/*------------------------------------------------
+  Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+  Code licensed under the BSD License:
+  http://developer.yahoo.net/yui/license.txt
+  version: 2.2.2
+ -----------------------------------------------*/
+
+/*------------------------------------------------
+  font-size: pixcel to % 
+  [left]If you want this size in pixels (px)
+  [right]Declare this percent (%) 
+  
+  (px)  (%)
+  10    77
+  11    85
+  12    92
+  13    100
+  14    107
+  15    114
+  16    122
+  17    129
+  18    136
+  19    144
+  20    152
+  21    159
+  22    167
+  23    174
+  24    182
+  25    189
+  26    197
+ -----------------------------------------------*/
+
+body {
+	/* font: 13px 'メイリオ',Meiryo,Arial,'ＭＳ ゴシック',arial,helvetica,clean,sans-serif; */
+	font: 13px 'ＭＳ ゴシック',sans-serif;
+	*font-size: small;
+	*font: x-small;
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+}
+
+select,
+input,
+textarea {
+	/* font: 99% 'メイリオ',Meiryo,Arial,'ＭＳ Ｐゴシック',arial,helvetica,clean,sans-serif; */
+	font: 99% 'ＭＳ ゴシック',sans-serif;
+}
+pre, code {
+	font: 115% monospace;
+	*font-size:100%;
+}
+body * {
+	line-height:1.22em;
+}
+
+/*------------------------------------------------
+  Universal selector
+ -----------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	color: #222;
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*------------------------------------------------
+  Structure Model
+ -----------------------------------------------*/
+
+body {
+	background-color: #fff;
+	/* font-family: 'メイリオ',Meiryo,Arial,'ＭＳ Ｐゴシック',Arial, Helvetica, sans-serif; */
+	font-family: 'ＭＳ ゴシック',sans-serif;
+}
+
+/*------------------------------------------------
+  Text Module
+ -----------------------------------------------*/
+
+p,
+pre,
+address,
+cite {
+	margin: 0.5em 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0.5em 14px;
+}
+
+h1 {
+	font-size: 189%;
+}
+
+h2 {
+	font-size: 159%;
+}
+
+h3 {
+	font-size: 144%;
+}
+
+h4 {
+	font-size: 122%;
+}
+
+h5 {
+	font-size: 107%;
+}
+
+h6 {
+	font-size: 107%;
+}
+
+pre {
+	padding: 0.5em 10px;
+	border: 3px solid #eee;
+	width: auto;
+	_width: 90%;
+	overflow: scroll;
+	color: #3d4263;
+	font-family: "Osaka-等幅", monospace;
+}
+
+pre[title]::before {
+	margin-bottom: 0.4em;
+	padding: 0 10px;
+	display: block;
+	content: attr(title);
+	color: black;
+	background-color: #eee;
+}
+
+blockquote {
+	margin: 1.5em 14px 1.5em 40px;
+	padding: 1px;
+	background-color: #eee;
+}
+
+blockquote * {
+	color: #888;
+}
+
+blockquote[title]::before {
+	margin: 2px;
+	padding: 0.1em 16px;
+	display: block;
+	content: attr(title);
+	background-color: #fff;
+}
+
+blockquote[cite]::after {
+	padding: 0.1em 14px;
+	display: block;
+	content: attr(cite);
+	color: #333333;
+	text-align: right;
+}
+
+cite {
+	display: block;
+	color: #333333;
+	text-align: right;
+}
+
+em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+strong {
+	/*color: #ff4500;*/
+	font-weight: bold;
+}
+
+code {
+	font-family: "Osaka-等幅", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #aaa;
+	cursor: help;
+}
+
+kbd {
+	border: 1px solid #ccc;
+	padding: 0 0.3em;
+	background-color: #f5f5f5;
+	font-family: "Osaka-等幅", monospace;
+	text-transform: uppercase;
+}
+
+/*------------------------------------------------
+  Hypertext Module
+ -----------------------------------------------*/
+
+a:link {
+	color: #0033cc;
+}
+
+a:visited {
+	color: #333366;
+}
+a:hover {
+	color: #ff0000;
+}
+a:active {
+	color: #ff0000;
+}
+a:focus {
+	color: #ff0000;
+}
+
+a:link span,
+a:link strong,
+a:link sup {
+	color: #0033cc;
+}
+
+a:visited span,
+a:visited strong,
+a:visited sup {
+	color: #333366;
+}
+a:hover span,
+a:hover strong,
+a:hover sup {
+	color: #ff0000;
+}
+a:active span,
+a:active strong,
+a:active sup {
+	color: #ff0000;
+}
+a:focus span,
+a:focus strong,
+a:focus sup {
+	color: #ff0000;
+}
+
+
+/*------------------------------------------------
+  List Module
+ -----------------------------------------------*/
+
+ul,
+ol,
+dl {
+	margin: 1em 14px 1em 14px;
+	padding: 1px 10px;
+	list-style-position: outside;
+}
+ul {
+	margin-left: 18px;
+}
+
+li,
+dt,
+dd {
+	font-size: 100%;
+}
+
+li {
+}
+dt {
+}
+
+dd {
+}
+
+li li,
+li p,
+li pre,
+li dt,
+li dd,
+dd li,
+dd p,
+dd pre,
+dd dt,
+dd dd {
+	font-size: 100%;
+}
+
+li ul,
+li ol,
+li dl,
+li p,
+dd ul,
+dd ol,
+dd dl,
+dd p {
+	margin: 0 10px;
+}
+
+/*------------------------------------------------
+  Edit Module
+ -----------------------------------------------*/
+
+del {
+	color: #666666;
+	text-decoration: line-through;
+}
+
+del[datetime]::before {
+	content: " ( "attr(datetime)"\00524a\009664) ";
+}
+
+ins {
+	border-bottom: 1px dotted #ccc;
+	text-decoration: none;
+}
+
+ins[datetime]::before {
+	content: " ( "attr(datetime)"\004fee\006b63) ";
+}
+
+
+/*------------------------------------------------
+  Forms Module
+ -----------------------------------------------*/
+
+form {
+/*	margin: 0.5em 14px;
+	padding: 1px 0;*/
+}
+
+form dl,
+form p {
+	margin: 0.5em 10px;
+}
+
+fieldset {
+	border: 1px solid #ddd;
+}
+
+legend {
+	margin: 0 1em;
+	padding: 0 10px;
+}
+
+input,
+textarea {
+	/* font-family: 'メイリオ',Meiryo,Arial,'ＭＳ Ｐゴシック',arial,helvetica,clean,sans-serif; */
+	font-family: 'ＭＳ ゴシック',sans-serif;
+}
+input {
+	line-height: 1.5;
+}
+
+textarea {
+	padding: 0.4em 8px;
+}
+
+/*------------------------------------------------
+  Tables Module
+ -----------------------------------------------*/
+
+table {
+	margin: 0 14px 0.5em 14px;
+	border-collapse: collapse;
+	border: 1px solid #666666;
+	background-color: #eee;
+}
+
+th,
+td {
+	padding: 0 10px;
+}
+
+th {
+	border: 1px solid #666666;
+	color: #fff;
+	background-color: #999;
+}
+
+td {
+	border: 1px solid #666666;
+	background-color: #fff;
+}
+
+/*------------------------------------------------
+  Image Module
+ -----------------------------------------------*/
+a img {
+	border: none;
+}

@@ -1,0 +1,725 @@
+﻿@charset "utf-8";
+
+div#container {
+	width: 760px;
+}
+
+body#body_main {
+	background-color: #EEEEEE;
+}
+div.scroll_container {
+  overflow:scroll;
+}
+
+/* パターンエリア */
+div#container_ptn {
+  position: absolute;
+  left : 0px;
+  top  : 4px;
+  width : 920px;/* @@MS 960 */
+  height : 20px;  /* 注文ボタン高さ + 17(Scrollbar) */
+}
+/* カテゴリ１エリア */
+div#scroll_container_btn_catA {
+  position: absolute;
+  left : 0px;
+  top  : 28px;
+  width : 920px;/* @@MS 960 */
+  height : 70px; /* カテゴリ１ボタン高さ + 17(Scrollbar) */
+}
+/* カテゴリ２エリア */
+div#scroll_container_btn_catB {
+  position: absolute;
+  left : 0px;    
+  top  : 98px;     /* カテゴリ１エリアheight */
+  width : 920px;/* @@MS 960 */
+  height : 60px;   /* カテゴリ２ボタン高さ + 17(Scrollbar) */
+}
+/* 注文ボタンエリア */
+div#scroll_container_btn_order {
+  position: absolute;
+  left : 0px;
+  top  : 158px;    /* カテゴリ２エリアtop + カテゴリ２エリアheight */
+  width : 920px;/* @@MS 960 */
+  height : 347px;  /* 注文ボタン高さ + 17(Scrollbar) */
+}
+
+/* 共通 */
+div.scroll_container p {
+	margin: 0;
+}
+p.pright {
+  text-align: right;
+}
+p.nameshort {
+  text-align: center;
+}
+
+/* 内部コンテナ */
+div.container_btn_catA
+{
+  height : 53px;  /* カテゴリ１ボタン高さ */
+}
+div.container_btn_catB
+{
+  height : 43px;  /* カテゴリ２ボタン高さ */
+}
+div.container_btn_order
+{
+  height : 330px;
+}
+
+/* =========================================================
+ ■パターン
+ ======================================================== */
+div#container_ptn #select_ptn {
+  position: absolute;
+  padding:0;
+  margin:0;
+  left:5px;
+  top:0;
+  width:200px;
+	font-size:14px;
+}
+div#container_ptn #select_lang {
+  position: absolute;
+  padding:0;
+  margin:0;
+  left:215px;
+  top:0;
+  width:160px;
+	font-size:14px;
+}
+
+/* =========================================================
+ ■カテゴリ１
+ ======================================================== */
+div.btn_catA
+{
+  position: absolute;
+  width  : 190px;  /* カテゴリ１ボタン幅 */
+  height :  53px;  /* カテゴリ１ボタン高さ */
+  background: #FFFFFF url(./btn_catA_n.png) 0 0 no-repeat;
+}
+/* [カテゴリ１ﾎﾞﾀﾝ]押下状態 */
+.container_btn_catA div.btn_on
+{
+	background: #FFFFFF url(./btn_catA_d.png) 0 0 no-repeat;
+}
+/* [カテゴリ１ﾎﾞﾀﾝ]マウスオーバー状態 */
+.container_btn_catA div.btn_over
+{
+	background: #FFFFFF url(./btn_catA_o.png) 0 0 no-repeat;
+	cursor:pointer;
+}
+p.btn_catA_imge {
+    position: absolute;
+    width  : 190px;  /* カテゴリ１ボタン幅 */
+    height :  53px;  /* カテゴリ１ボタン高さ */
+}
+/*   上下左右 中央寄せ */
+  div.btn_centerA
+  {
+    position: absolute;
+    width  : 190px; /* カテゴリ１ボタン幅(若干狭くても) */
+    height :  53px; /* カテゴリ１ボタン高さ */
+    display : table;
+  }
+  div.btn_centerA p.btn_catA_name {
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+    color:#000000;
+    font-size  :16px;
+    line-height:17px;
+  }
+  div.btn_on div.btn_centerA p.btn_catA_name {
+    color:#000000;
+  }
+/* left = ｶﾃｺﾞﾘ1幅190 * (ｶﾃｺﾞﾘ順-1) + (ｶﾃｺﾞﾘ順-1)*余白1px */
+div.catA_posi_001 { left: 0px; }
+div.catA_posi_002 { left: 191px; }
+div.catA_posi_003 { left: 382px; }
+div.catA_posi_004 { left: 573px; }
+div.catA_posi_005 { left: 764px; }
+div.catA_posi_006 { left: 955px; }
+div.catA_posi_007 { left: 1146px; }
+div.catA_posi_008 { left: 1337px; }
+div.catA_posi_009 { left: 1528px; }
+div.catA_posi_010 { left: 1719px; }
+div.catA_posi_011 { left: 1910px; }
+div.catA_posi_012 { left: 2101px; }
+div.catA_posi_013 { left: 2292px; }
+div.catA_posi_014 { left: 2483px; }
+div.catA_posi_015 { left: 2674px; }
+div.catA_posi_016 { left: 2865px; }
+div.catA_posi_017 { left: 3056px; }
+div.catA_posi_018 { left: 3247px; }
+div.catA_posi_019 { left: 3438px; }
+div.catA_posi_020 { left: 3629px; }
+
+/* =========================================================
+ ■カテゴリ２
+ ======================================================== */
+div.btn_catB
+{
+  position: absolute;
+  width  : 168px;  /* カテゴリ２ボタン幅 */
+  height :  43px;  /* カテゴリ２ボタン高さ */
+	background: #FFFFFF url(./btn_catB_n.png) 0 0 no-repeat;
+}
+/* [カテゴリ２ﾎﾞﾀﾝ]押下状態 */
+.container_btn_catB div.btn_on
+{
+	background: #FFFFFF url(./btn_catB_d.png) 0 0 no-repeat;
+}
+/* [カテゴリ２ﾎﾞﾀﾝ]マウスオーバー状態 */
+.container_btn_catB div.btn_over
+{
+	background: #FFFFFF url(./btn_catB_o.png) 0 0 no-repeat;
+	cursor:pointer;
+}
+/*   上下左右 中央寄せ */
+  div.btn_centerB
+  {
+    position: absolute;
+    width  : 168px; /* カテゴリ２ボタン幅(若干狭くても) */
+    height :  43px; /* カテゴリ２ボタン高さ */
+    display : table;
+  }
+  div.btn_centerB p.btn_catB_name {
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+    color:#000000;
+    font-size  :14px;
+    line-height:15px;
+  }
+  div.btn_on div.btn_centerB p.btn_catB_name {
+    color:#000000;
+  }
+
+/* left = ｶﾃｺﾞﾘ2幅168 * (ｶﾃｺﾞﾘ順-1) + (ｶﾃｺﾞﾘ順-1)*余白1px */
+div.catB_posi_001 { left: 0px; }
+div.catB_posi_002 { left: 169px; }
+div.catB_posi_003 { left: 338px; }
+div.catB_posi_004 { left: 507px; }
+div.catB_posi_005 { left: 676px; }
+div.catB_posi_006 { left: 845px; }
+div.catB_posi_007 { left: 1014px; }
+div.catB_posi_008 { left: 1183px; }
+div.catB_posi_009 { left: 1352px; }
+div.catB_posi_010 { left: 1521px; }
+div.catB_posi_011 { left: 1690px; }
+div.catB_posi_012 { left: 1859px; }
+div.catB_posi_013 { left: 2028px; }
+div.catB_posi_014 { left: 2197px; }
+div.catB_posi_015 { left: 2366px; }
+div.catB_posi_016 { left: 2535px; }
+div.catB_posi_017 { left: 2704px; }
+div.catB_posi_018 { left: 2873px; }
+div.catB_posi_019 { left: 3042px; }
+div.catB_posi_020 { left: 3211px; }
+div.catB_posi_021 { left: 3380px; }
+div.catB_posi_022 { left: 3549px; }
+div.catB_posi_023 { left: 3718px; }
+div.catB_posi_024 { left: 3887px; }
+div.catB_posi_025 { left: 4056px; }
+div.catB_posi_026 { left: 4225px; }
+div.catB_posi_027 { left: 4394px; }
+div.catB_posi_028 { left: 4563px; }
+div.catB_posi_029 { left: 4732px; }
+div.catB_posi_030 { left: 4901px; }
+
+/* =========================================================
+ ■注文ボタン(共通)
+ ======================================================== */
+p.btn_order_numb
+{
+  left: 8px;
+  top : 8px;
+  font-size: 13px;
+  color: #888888;
+	background: transparent url(./code_back.png) 0 0 repeat;
+}
+p.btn_order_code
+{
+  left: 33px;
+  top : 8px;
+  font-size: 13px;
+  color: #3366FF;
+	background: transparent url(./code_back.png) 0 0 repeat;
+}
+.nomenu p.btn_order_code {
+  color: #FF0000;
+}
+p.btn_order_free
+{
+  right: 8px;
+  top : 8px;
+  font-size: 13px;
+  color: #FF2894;
+	background: transparent url(./code_back.png) 0 0 repeat;
+}
+p.btn_order_eito
+{
+  right: 8px;
+  top : 26px;
+  font-size: 13px;
+  color: #FF2894;
+	background: transparent url(./code_back.png) 0 0 repeat;
+}
+p.btn_order_icon
+{
+  left: 8px;
+  top : 22px;
+}
+/* ハーフﾎﾞﾀﾝは画像表示なし */
+.btn_orderHF p.btn_order_imge {
+	display:none;
+}
+.view0 {
+	display:none;
+}
+
+/* =========================================================
+ ■注文ボタン(ハーフ:HF)
+ ======================================================== */
+div.btn_orderHF
+{
+  position: absolute;
+  width  : 170px;  /* 注文ボタン幅 */
+  height :  78px;  /* 注文ボタン高さ */
+	background: #FFFFFF url(./btn_orderHF_n.png) 0 0 no-repeat;
+}
+div.btn_orderHF p
+{
+  position: absolute;
+}
+div.btn_orderHF p.btn_order_imge
+{
+  left   : 9px;
+  bottom : 71px;
+}
+div.btn_orderHF p.btn_order_imge img
+{
+  border : solid 2px #999999;
+}
+div.btn_orderHF p.btn_order_name
+{
+  left: 66px;
+  top : 25px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 13px; /* フォントサイズ+1 */
+  width : 104px; /* div.width - left */
+}
+div.btn_orderHF p.btn_order_prce
+{
+  right: 10px;
+  top :  50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+div.btn_orderHF p.btn_order_supl
+{
+  right: 10px;
+  top :  63px;
+  font-size: 9px;
+  font-weight: bold;
+}
+div.btn_orderHF p.btn_order_detl
+{
+  left   : 6px;
+  bottom : 4px;
+}
+div.btn_orderHF p.btn_order_detl img
+{
+  width  : 20px;
+  height : 20px;
+}
+
+
+/* =========================================================
+ ■注文ボタン(シングル:SG)
+ ======================================================== */
+div.btn_orderSG
+{
+  position: absolute;
+  width  : 170px;  /* 注文ボタン幅 */
+  height : 162px;  /* 注文ボタン高さ */
+	background: #FFFFFF url(./btn_orderSG_n.png) 0 0 no-repeat;
+}
+div.btn_orderSG p
+{
+  position: absolute;
+}
+div.btn_orderSG p.btn_order_imge
+{
+  left   : 32px;
+  bottom : 78px;
+}
+div.btn_orderSG p.btn_order_imge img
+{
+  border : solid 2px #999999;
+}
+div.btn_orderSG p.btn_order_name
+{
+  left: 34px;
+  top : 91px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 16px; /* フォントサイズ+1 */
+  width : 110px; /* div.width - left + 調整(狭く) */
+}
+div.btn_orderSG p.btn_order_prce
+{
+  right: 10px;
+  top : 122px;
+  font-size: 15px;
+  font-weight: bold;
+}
+div.btn_orderSG p.btn_order_supl
+{
+  right: 10px;
+  top : 140px;
+  font-size: 13px;
+  font-weight: bold;
+}
+div.btn_orderSG p.btn_order_detl
+{
+  left   : 6px;
+  bottom : 4px;
+}
+div.btn_orderSG p.btn_order_detl img
+{
+  width  : 34px;
+  height : 34px;
+}
+
+/* =========================================================
+ ■注文ボタン(縦ダブル:TD)
+ ======================================================== */
+div.btn_orderTD
+{
+  position: absolute;
+  width  : 170px;  /* 注文ボタン幅 */
+  height : 330px;  /* 注文ボタン高さ */
+	background: #FFFFFF url(./btn_orderTD_n.png) 0 0 no-repeat;
+}
+div.btn_orderTD p
+{
+  position: absolute;
+}
+div.btn_orderTD p.btn_order_imge
+{
+  left   : 9px;
+  bottom : 160px;
+}
+div.btn_orderTD p.btn_order_imge img
+{
+  border : solid 2px #999999;
+}
+div.btn_orderTD p.btn_order_name
+{
+  left: 16px;
+  top : 175px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 21px; /* フォントサイズ+1 */
+  width : 154px; /* div.width - left */
+}
+div.btn_orderTD p.btn_order_prce
+{
+  right: 10px;
+  top : 230px;
+  font-size: 20px;
+  font-weight: bold;
+}
+div.btn_orderTD p.btn_order_supl
+{
+  right: 10px;
+  top : 250px;
+  font-size: 18px;
+  font-weight: bold;
+}
+div.btn_orderTD p.btn_order_detl
+{
+  left   : 6px;
+  bottom : 4px;
+}
+div.btn_orderTD p.btn_order_detl img
+{
+  width  : 50px;
+  height : 50px;
+}
+
+/* =========================================================
+ ■注文ボタン(横ダブル:YD)
+ ======================================================== */
+div.btn_orderYD
+{
+  position: absolute;
+  width  : 345px;  /* 注文ボタン幅 */
+  height : 162px;  /* 注文ボタン高さ */
+	background: #FFFFFF url(./btn_orderYD_n.png) 0 0 no-repeat;
+}
+div.btn_orderYD p
+{
+  position: absolute;
+}
+div.btn_orderYD p.btn_order_imge
+{
+  left   :  9px;
+  bottom : 20px;
+}
+div.btn_orderYD p.btn_order_imge img
+{
+  border : solid 2px #999999;
+}
+div.btn_orderYD p.btn_order_name
+{
+  left: 178px;
+  top :  38px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 21px; /* フォントサイズ+1 */
+  width : 167px; /* div.width - left */
+}
+div.btn_orderYD p.btn_order_prce
+{
+  right: 12px;
+  top :  85px;
+  font-size: 20px;
+  font-weight: bold;
+}
+div.btn_orderYD p.btn_order_supl
+{
+  right: 12px;
+  top : 108px;
+  font-size: 18px;
+  font-weight: bold;
+}
+div.btn_orderYD p.btn_order_detl
+{
+  left   : 6px;
+  bottom : 4px;
+}
+div.btn_orderYD p.btn_order_detl img
+{
+  width  : 35px;
+  height : 35px;
+}
+
+
+/* =========================================================
+ ■注文ボタン(４倍角:4B)
+ ======================================================== */
+div.btn_order4B
+{
+  position: absolute;
+  width  : 345px;  /* 注文ボタン幅 */
+  height : 330px;  /* 注文ボタン高さ */
+	background: #FFFFFF url(./btn_order4B_n.png) 0 0 no-repeat;
+}
+div.btn_order4B p
+{
+  position: absolute;
+}
+div.btn_order4B p.btn_order_imge
+{
+  left   : 19px;
+  bottom : 88px;
+}
+div.btn_order4B p.btn_order_imge img
+{
+  border : solid 2px #999999;
+}
+div.btn_order4B p.btn_order_name
+{
+  left:  10px;
+  top : 245px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 23px; /* フォントサイズ+1 */
+  width : 335px; /* div.width - left */
+}
+div.btn_order4B p.btn_order_prce
+{
+  right: 15px;
+  top : 273px;
+  font-size: 22px;
+  font-weight: bold;
+}
+div.btn_order4B p.btn_order_supl
+{
+  right: 15px;
+  top : 300px;
+  font-size: 18px;
+  font-weight: bold;
+}
+div.btn_order4B p.btn_order_detl
+{
+  left   : 6px;
+  bottom : 4px;
+}
+div.btn_order4B p.btn_order_detl img
+{
+  width  : 50px;
+  height : 50px;
+}
+
+
+/* =========================================================
+ ■ﾌﾘｰﾚｲｱｳﾄページ
+ ======================================================== */
+.freepage
+{
+  position:absolute;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
+
+/* =========================================================
+ ■ﾌﾘｰﾚｲｱｳﾄ枠(タッチ枠)
+ ======================================================== */
+.freeframe_tch
+{
+  position:absolute;
+  background:url(./frame_t_back.png);
+  border:solid #3366FF 1px;
+  overflow:hidden;
+}
+/* =========================================================
+ ■ﾌﾘｰﾚｲｱｳﾄ枠(名称枠)
+ ======================================================== */
+.freeframe_nme
+{
+  position:absolute;
+  background:#FFFFFF;
+  border:solid #3D3221 1px;
+}
+/* ○ﾌﾘｰﾚｲｱｳﾄ枠(名称枠)：L1～L3:大 1～3行 */
+/* (参照→詳細設計書_画像リソース[3.ﾌﾘｰ名称枠計算]) */
+.frm_nme_L1
+{
+  width:280px; height:29px;
+}
+.frm_nme_L2
+{
+  width:280px; height:48px;
+}
+.frm_nme_L3
+{
+  width:280px; height:67px;
+}
+.frm_nme_L1 p,
+.frm_nme_L2 p,
+.frm_nme_L3 p
+{
+ font-size: 19px;
+}
+/* ○ﾌﾘｰﾚｲｱｳﾄ枠(名称枠)：M1～M4:中 1～4行 */
+/* (参照→詳細設計書_画像リソース[3.ﾌﾘｰ名称枠計算]) */
+.frm_nme_M1
+{
+  width:121px; height:22px;
+}
+.frm_nme_M2
+{
+  width:121px; height:36px;
+}
+.frm_nme_M3
+{
+  width:121px; height:50px;
+}
+.frm_nme_M4
+{
+  width:121px; height:64px;
+}
+.frm_nme_M1 p,
+.frm_nme_M2 p,
+.frm_nme_M3 p,
+.frm_nme_M4 p
+{
+ font-size: 13px;
+}
+/* ○ﾌﾘｰﾚｲｱｳﾄ枠(名称枠)：S1～S4:小 1～4行 */
+/* (参照→詳細設計書_画像リソース[3.ﾌﾘｰ名称枠計算]) */
+.frm_nme_S1
+{
+  width:100px; height:19px;
+}
+.frm_nme_S2
+{
+  width:100px; height:29px;
+}
+.frm_nme_S3
+{
+  width:100px; height:41px;
+}
+.frm_nme_S4
+{
+  width:100px; height:52px;
+}
+.frm_nme_S1 p,
+.frm_nme_S2 p,
+.frm_nme_S3 p,
+.frm_nme_S4 p
+{
+  font-size: 10px;
+}
+/* =========================================================
+ ■ﾌﾘｰﾚｲｱｳﾄ枠(iボタン枠)
+ ======================================================== */
+.freeframe_ibn
+{
+  position:absolute;
+  border:solid #3D3221 1px;
+  width:27px;
+  height:28px;
+}
+.frm_ibn_0 /* 0:詳細なし */
+{
+  background:url(./frame_i_none.png);
+}
+.frm_ibn_1 /* 1:詳細あり */
+{
+  background:url(./frame_i_nrml.png);
+}
+/* =========================================================
+ ■ﾌﾘｰﾚｲｱｳﾄ枠(共通)ツールチップ
+ ======================================================== */
+.div-tooltips {
+  position: absolute;
+  top: 510px;
+  left: 30px;
+  z-index: 99999;
+  padding: 0.3em 0.5em;
+  color: #000000;
+  background: #D4D9DD;
+  border-radius: 0.5em;
+  border-right: solid 1px #333333;
+  border-bottom: solid 1px #333333;
+}
+.div-tooltips:after {
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.5em;
+  top: -4px;
+  border-top:4px solid transparent;
+  border-left:8px solid #D4D9DD;
+}
+
+
+
+/* リンク */
+#contents a:link    { color: #000000; text-decoration:none;}
+#contents a:visited { color: #000000; text-decoration:none;}
+#contents a:hover   { color: #000000; text-decoration:none;}
+#contents a:active  { color: #000000; text-decoration:none;}
+#contents a:focus   { color: #000000; text-decoration:none;}
+#contents a:hover   { color: #000000; text-decoration:none;}
+
